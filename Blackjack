@@ -1,0 +1,123 @@
+import random
+
+print("Lets play some blackjack!!\n")
+
+cards = ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2"]
+suits = ["Hearts", "Diamonds", "Spades", "Clubs"]
+
+card1 = random.choice(cards)
+suit1 = random.choice(suits)
+
+card2 = random.choice(cards)
+suit2 = random.choice(suits)
+
+print("Your cards: ")
+print("Card 1 : " + card1 + " " + suit1)
+print("Card 2 : " + card2 + " " + suit2)
+
+points = 0
+
+if card1 == "K" or card1 == "Q" or card1 == "J" or card1 == "10":
+    points += 10
+elif card1 == "A":
+    points += 11
+elif card1 == "9":
+    points += 9
+elif card1 == "8":
+    points += 8
+elif card1 == "7":
+    points += 7
+elif card1 == "6":
+    points += 6
+elif card1 == "5":
+    points += 5
+elif card1 == "4":
+    points += 4
+elif card1 == "3":
+    points += 3
+elif card1 == "2":
+    points += 2
+
+if card2 == "K" or card2 == "Q" or card2 == "J" or card2 == "10":
+    points += 10
+elif card2 == "A":
+    points += 11
+elif card2 == "9":
+    points += 9
+elif card2 == "8":
+    points += 8
+elif card2 == "7":
+    points += 7
+elif card2 == "6":
+    points += 6
+elif card2 == "5":
+    points += 5
+elif card2 == "4":
+    points += 4
+elif card2 == "3":
+    points += 3
+elif card2 == "2":
+    points += 2
+
+comp_card1 = random.choice(cards)
+comp_suit1 = random.choice(suits)
+comp_card2 = random.choice(cards)
+comp_suit2 = random.choice(suits)
+
+computer_points = 0
+
+if comp_card1 == "K" or comp_card1 == "Q" or comp_card1 == "J" or comp_card1 == "10":
+    computer_points += 10
+elif comp_card1 == "A":
+    computer_points += 11
+elif comp_card1 == "9":
+    computer_points += 9
+elif comp_card1 == "8":
+    computer_points += 8
+elif comp_card1 == "7":
+    computer_points += 7
+elif comp_card1 == "6":
+    computer_points += 6
+elif comp_card1 == "5":
+    computer_points += 5
+elif comp_card1 == "4":
+    computer_points += 4
+elif comp_card1 == "3":
+    computer_points += 3
+elif comp_card1 == "2":
+    computer_points += 2
+
+if comp_card2 == "K" or comp_card2 == "Q" or comp_card2 == "J" or comp_card2 == "10":
+    computer_points += 10
+elif comp_card2 == "A":
+    computer_points += 11
+elif comp_card2 == "9":
+    computer_points += 9
+elif comp_card2 == "8":
+    computer_points += 8
+elif comp_card2 == "7":
+    computer_points += 7
+elif comp_card2 == "6":
+    computer_points += 6
+elif comp_card2 == "5":
+    computer_points += 5
+elif comp_card2 == "4":
+    computer_points += 4
+elif comp_card2 == "3":
+    computer_points += 3
+elif comp_card2 == "2":
+    computer_points += 2
+
+print("Computer cards are: ")
+print("Card 1 is " + comp_card1 + " " + comp_suit1)
+print("Card 2 is " + comp_card2 + " " + comp_suit2)
+
+print(f"\nYour points are {points}")
+print(f"Computer points are {computer_points}")
+
+if points == 21 or points > computer_points:
+    print("Wow!! Congratulations you have won!!")
+elif points == computer_points:
+    print("Its a tie!")
+else:
+    print("Sorry! You have lost.")
